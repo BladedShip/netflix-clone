@@ -1,22 +1,26 @@
 import bcrypt from "bcrypt";
 import { NextApiRequest, NextApiResponse } from "next";
-
 import prismaDB from "@/lib/prismaDB";
 
-export async function hanler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "POST")
-    return res.status(405).json({ message: "Method Not Allowed" });
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   try {
-    const { email, username, password } = await req.body;
+    if (req.method !== "POST") {
+      return res.status(405).end();
+    }
 
-    const isExistingUser = await prismaDB.user.findUnique({
+    const { email, username, password } = req.body;
+
+    const existingUser = await prismaDB.user.findUnique({
       where: {
         email,
       },
     });
 
-    if (isExistingUser) {
-      return res.status(422).json({ message: "User already exists" });
+    if (existingUser) {
+      return res.status(422).json({ error: "User Already Exists" });
     }
 
     const hashedPassword = await bcrypt.hash(password, 12);
@@ -32,8 +36,7 @@ export async function hanler(req: NextApiRequest, res: NextApiResponse) {
     });
 
     return res.status(200).json(user);
-  } catch (err) {
-    console.log(err);
-    return res.status(500).json({ message: "Internal Server Error" });
+  } catch (error) {
+    return res.status(400).json({ error: `Something went wrong: ${error}` });
   }
 }

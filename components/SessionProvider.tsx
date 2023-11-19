@@ -1,13 +1,16 @@
 "use client";
 
-import { Session } from "next-auth";
-import { SessionProvider as Provider } from "next-auth/react";
+import useCurrentUser from "@/hooks/useCurrentUser";
+import { useRouter } from "next/navigation";
 
 type Props = {
   children: React.ReactNode;
 };
 
 export default function SessionProvider({ children }: Props) {
-  
-  return <Provider>{children}</Provider>;
+  const router = useRouter();
+
+  const { data, isLoading } = useCurrentUser();
+  if (!data && !isLoading) router.push("/auth");
+  return <>{children}</>;
 }
