@@ -46,7 +46,7 @@ const AuthScreen = (props: Props) => {
         callbackUrl: "/",
       });
 
-      router.push("/");
+      router.push("/profiles");
     } catch (err) {
       console.log(err);
     }
