@@ -105,3 +105,20 @@ const AuthScreen = (props: Props) => {
 export default AuthScreen;
 
 // Possible Improvements: Switch from using states to a form along with server actions, making this fully Server Side Rendered
+
+// const LoginWithServerActions = (props: Props) => {
+//   const submitCredentials = (e: React.FormEvent<HTMLFormElement>) => {
+//     "use server";
+//     e.preventDefault();
+//     const username = e.currentTarget.username.value;
+//     const password = e.currentTarget.password.value;
+//     // Some server side validation function
+//   };
+//   return (
+//     <form onSubmit={submitCredentials}>
+//       <input type="text" placeholder="username" />
+//       <input type="password" placeholder="password" />
+//       <button type="submit">Log In</button>
+//     </form>
+//   );
+// };
