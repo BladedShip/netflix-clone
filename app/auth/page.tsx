@@ -4,11 +4,11 @@
 import { useCallback, useState } from "react";
 import Image from "next/image";
 import { signIn } from "next-auth/react";
+import axios from "axios";
+import { useRouter } from "next/navigation";
 
 // Component Imports
 import Input from "./_components/Input";
-import axios from "axios";
-import { useRouter } from "next/navigation";
 
 type Props = {};
 
@@ -36,6 +36,7 @@ const AuthScreen = (props: Props) => {
     );
   };
 
+  // used useCallback just to ensure that the function is not redefined on every render.
   const login = useCallback(async () => {
     try {
       await signIn("credentials", {
@@ -53,7 +54,7 @@ const AuthScreen = (props: Props) => {
 
   const registerUser = useCallback(async () => {
     try {
-      const { data } = await axios.post("/api/register", {
+      await axios.post("/api/register", {
         email,
         username,
         password,

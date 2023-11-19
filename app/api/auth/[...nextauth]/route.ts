@@ -4,6 +4,7 @@ import bcrypt from "bcrypt";
 
 import prismaDB from "@/lib/prismaDB";
 
+// Initializing NextAuth
 const handler = NextAuth({
   providers: [
     Credentials({
@@ -60,4 +61,5 @@ const handler = NextAuth({
   secret: process.env.NEXTAUTH_SECRET,
 });
 
+// NextAuth doesn't technically officially support Next 13.2 and above, so this was the workaround that I found
 export { handler as GET, handler as POST };
