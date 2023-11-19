@@ -1,11 +1,14 @@
 "use client";
 
 // Package Imports
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import Image from "next/image";
+import { signIn } from "next-auth/react";
 
 // Component Imports
 import Input from "./_components/Input";
+import axios from "axios";
+import { useRouter } from "next/navigation";
 
 type Props = {};
 
@@ -15,6 +18,8 @@ enum AuthDisplayState {
 }
 
 const AuthScreen = (props: Props) => {
+  const router = useRouter();
+
   const [email, setEmail] = useState<string>("");
   const [username, setUsername] = useState<string>("");
   const [password, setPassword] = useState<string>("");
@@ -30,6 +35,34 @@ const AuthScreen = (props: Props) => {
         : AuthDisplayState.LOGIN
     );
   };
+
+  const login = useCallback(async () => {
+    try {
+      await signIn("credentials", {
+        email,
+        password,
+        redirect: false,
+        callbackUrl: "/",
+      });
+
+      router.push("/");
+    } catch (err) {
+      console.log(err);
+    }
+  }, [email, password, router]);
+
+  const registerUser = useCallback(async () => {
+    try {
+      const { data } = await axios.post("/api/register", {
+        email,
+        username,
+        password,
+      });
+      login();
+    } catch (err) {
+      console.log(err);
+    }
+  }, [email, username, password]);
 
   return (
     <main className="relative h-full w-full bg-[url('/assets/banner.jpeg')] bg-no-repeat bg-center bg-fixed bg-cover">
@@ -79,7 +112,12 @@ const AuthScreen = (props: Props) => {
                 }}
               />
             </div>
-            <button className="bg-red-600 py-3 text-white rounded-md w-full mt-10 hover:bg-red-700 transition cursor-pointer">
+            <button
+              className="bg-red-600 py-3 text-white rounded-md w-full mt-10 hover:bg-red-700 transition cursor-pointer"
+              onClick={
+                authState === AuthDisplayState.LOGIN ? login : registerUser
+              }
+            >
               {authState === AuthDisplayState.LOGIN ? "Log In" : "Sign Up"}
             </button>
             <p className="text-neutral-500 mt-12">
