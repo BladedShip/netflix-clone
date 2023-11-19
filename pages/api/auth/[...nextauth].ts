@@ -1,15 +1,14 @@
-import NextAuth from "next-auth";
+import NextAuth, { AuthOptions } from "next-auth";
 import Credentials from "next-auth/providers/credentials";
-import bcrypt from "bcrypt";
+import { compare } from "bcrypt";
 
 import prismaDB from "@/lib/prismaDB";
 
-// Initializing NextAuth
-const handler = NextAuth({
+export const authOptions: AuthOptions = {
   providers: [
     Credentials({
       id: "credentials",
-      name: "credentials",
+      name: "Credentials",
       credentials: {
         email: {
           label: "Email",
@@ -17,31 +16,31 @@ const handler = NextAuth({
         },
         password: {
           label: "Password",
-          type: "password",
+          type: "passord",
         },
       },
       async authorize(credentials) {
         if (!credentials?.email || !credentials?.password) {
-          throw new Error("Missing credentials");
+          throw new Error("Email and password required");
         }
 
         const user = await prismaDB.user.findUnique({
           where: {
-            email: credentials?.email,
+            email: credentials.email,
           },
         });
 
         if (!user || !user.hashedPassword) {
-          throw new Error("Invalid Username");
+          throw new Error("Email does not exist");
         }
 
-        const isPasswordCorrect = await bcrypt.compare(
-          credentials?.password,
+        const isCorrectPassword = await compare(
+          credentials.password,
           user.hashedPassword
         );
 
-        if (!isPasswordCorrect) {
-          throw new Error("Invalid Password");
+        if (!isCorrectPassword) {
+          throw new Error("Incorrect password");
         }
 
         return user;
@@ -52,14 +51,11 @@ const handler = NextAuth({
     signIn: "/auth",
   },
   debug: process.env.NODE_ENV === "development",
-  session: {
-    strategy: "jwt",
-  },
+  session: { strategy: "jwt" },
   jwt: {
     secret: process.env.NEXTAUTH_JWT_SECRET,
   },
   secret: process.env.NEXTAUTH_SECRET,
-});
+};
 
-// NextAuth doesn't technically officially support Next 13.2 and above, so this was the workaround that I found
-export { handler as GET, handler as POST };
+export default NextAuth(authOptions);
