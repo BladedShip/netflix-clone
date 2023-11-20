@@ -8,6 +8,7 @@ declare global {
 
 type MovieData = {
   title: string;
+  slug: string;
   description: string;
   videoUrl: string;
   thumbnailUrl: string;

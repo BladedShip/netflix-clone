@@ -3,6 +3,7 @@ import { MovieData } from "@/typings";
 import Image from "next/image";
 import React from "react";
 import { BsFillPlayFill } from "react-icons/bs";
+import FavoriteButton from "./FavoriteButton";
 
 type Props = {
   movieData: MovieData;
@@ -32,6 +33,7 @@ const MovieCard = (props: Props) => {
             <button className="cursor-pointer w-6 h-6 lg:w-10 lg:h-10 bg-white rounded-full flex items-center justify-center transition hover:bg-neutral-400">
               <BsFillPlayFill className="ml-[2px]" size={26} />
             </button>
+            <FavoriteButton movieSlug={props.movieData.slug} />
           </div>
           {props.movieData.isNew && (
             <p className="text-green-400 text-sm font-semibold mt-4">
