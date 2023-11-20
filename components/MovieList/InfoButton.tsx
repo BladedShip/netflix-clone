@@ -4,7 +4,7 @@ import useModalStore from "@/stores/modalVisible";
 import useMovieStore from "@/stores/movieStore";
 import { MovieData } from "@/typings";
 import React from "react";
-import { AiOutlineInfo } from "react-icons/ai";
+import { BsChevronDown } from "react-icons/bs";
 
 type Props = {
   movie: MovieData;
@@ -22,7 +22,7 @@ const InfoButton = (props: Props) => {
         setVisible(true);
       }}
     >
-      <AiOutlineInfo className="text-white" size={26} />
+      <BsChevronDown className="text-white mt-1" size={24} />
     </button>
   );
 };
