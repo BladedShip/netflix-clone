@@ -4,6 +4,7 @@ import Image from "next/image";
 import React from "react";
 import { BsFillPlayFill } from "react-icons/bs";
 import FavoriteButton from "./FavoriteButton";
+import Link from "next/link";
 
 type Props = {
   movieData: MovieData;
@@ -30,9 +31,12 @@ const MovieCard = (props: Props) => {
         />
         <div className="z-10 bg-zinc-800 p-4 absolute transition w-full rounded-b-md shadow-md">
           <div className="flex flex-row items-center gap-4">
-            <button className="cursor-pointer w-6 h-6 lg:w-10 lg:h-10 bg-white rounded-full flex items-center justify-center transition hover:bg-neutral-400">
+            <Link
+              href={`/movie/${props.movieData.slug}`}
+              className="cursor-pointer w-6 h-6 lg:w-10 lg:h-10 bg-white rounded-full flex items-center justify-center transition hover:bg-neutral-400"
+            >
               <BsFillPlayFill className="ml-[2px]" size={26} />
-            </button>
+            </Link>
             <FavoriteButton movieSlug={props.movieData.slug} />
           </div>
           {props.movieData.isNew && (

@@ -1,11 +1,12 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { AiOutlineInfoCircle } from "react-icons/ai";
 import { FiVolume2, FiVolumeX } from "react-icons/fi";
 import { BsFillPlayFill } from "react-icons/bs";
 
 import getBillboard from "@/hooks/getBillboard";
+import Link from "next/link";
 
 type Props = {};
 
@@ -46,10 +47,13 @@ const Billboard = (props: Props) => {
           {data?.description}
         </p>
         <div className="flex flex-row items-center mt-4 gap-4">
-          <button className="bg-white text-black rounded-md p-2 px-3 text-sm lg:text-lg font-semibold flex flex-row items-center hover:bg-opacity-80 transition cursor-pointer">
+          <Link
+            href={`/movie/${data?.slug}`}
+            className="bg-white text-black rounded-md p-2 px-3 text-sm lg:text-lg font-semibold flex flex-row items-center hover:bg-opacity-80 transition cursor-pointer"
+          >
             <BsFillPlayFill className="mr-2" size={26} />
             Play
-          </button>
+          </Link>
           <button className="bg-white text-white bg-opacity-30 rounded-md p-2 px-3 text-sm lg:text-lg font-semibold flex flex-row items-center hover:bg-opacity-20 transition">
             <AiOutlineInfoCircle className="mr-2" size={20} />
             More Info
