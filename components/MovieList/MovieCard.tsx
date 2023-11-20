@@ -5,6 +5,7 @@ import React from "react";
 import { BsFillPlayFill } from "react-icons/bs";
 import FavoriteButton from "./FavoriteButton";
 import Link from "next/link";
+import InfoButton from "./InfoButton";
 
 type Props = {
   movieData: MovieData;
@@ -38,6 +39,9 @@ const MovieCard = (props: Props) => {
               <BsFillPlayFill className="ml-[2px]" size={26} />
             </Link>
             <FavoriteButton movieSlug={props.movieData.slug} />
+            <InfoButton
+              movie={props.movieData}
+            />
           </div>
           {props.movieData.isNew && (
             <p className="text-green-400 text-sm font-semibold mt-4">

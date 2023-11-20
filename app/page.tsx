@@ -1,4 +1,5 @@
 import Billboard from "@/components/Billboard";
+import InfoModal from "@/components/InfoModal";
 import MovieList from "@/components/MovieList";
 import ClientWrapper from "@/components/MovieList/ClientWrapper";
 import Navbar from "@/components/Navbar";
@@ -9,6 +10,8 @@ type Props = {};
 const Home = (props: Props) => {
   return (
     <main>
+      <InfoModal
+      />
       <Navbar />
       <Billboard />
       <section id="recommended-movie-list">
