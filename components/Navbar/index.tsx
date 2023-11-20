@@ -1,14 +1,16 @@
 import Image from "next/image";
+import { BsBell, BsSearch } from "react-icons/bs";
 
 import NavElement from "./NavElement";
 import DropdownSmall from "./DropdownSmall";
+import AccountSwitcher from "./AccountSwitcher";
 
 type Props = {};
 
 const Navbar = (props: Props) => {
   return (
     <nav className="w-full fixed z-50">
-      <div className="px-4 md:px-16 py-6 flex flex-row items-center transition duration-700 bg-zinc-900 bg-opacity-90">
+      <div className="px-4 md:px-16 py-6 flex flex-row items-center transition duration-700 ">
         <Image
           src="/assets/logo.png"
           alt="Netflix Logo"
@@ -24,6 +26,15 @@ const Navbar = (props: Props) => {
           <NavElement label="Browse By Languages" />
         </div>
         <DropdownSmall />
+        <div className="flex flex-row ml-auto gap-6 items-center">
+          <div className="text-gray-300 hover:text-gray-500 cursor-pointer transition">
+            <BsSearch size={20} />
+          </div>
+          <div className="text-gray-300 hover:text-gray-500 cursor-pointer transition">
+            <BsBell size={20} />
+          </div>
+          <AccountSwitcher />
+        </div>
       </div>
     </nav>
   );

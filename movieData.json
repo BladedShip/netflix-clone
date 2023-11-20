@@ -1,0 +1,66 @@
+[
+  {
+    "title": "Rick Astley",
+    "description": "Join the journey as Rick Astley embarks on a mission to roll everyone in the Universe",
+    "videoUrl": "https://res.cloudinary.com/derb7py6u/video/upload/v1700486345/roll.mp4",
+    "thumbnailUrl": "https://metro.co.uk/wp-content/uploads/2022/08/rick-astley-205a.jpg",
+    "genre": "Comedy",
+    "duration": "73 hours"
+  },
+  {
+    "title": "Scott Pilgrim Takes Off",
+    "description": "Slacker Scott Pilgrim leads a sweet and simple life. Until sparks fly — and ignite total chaos — when he meets the rainbow-haired girl of his dreams.",
+    "videoUrl": "https://res.cloudinary.com/derb7py6u/video/upload/v1700485918/scott-pilgrim.mp4",
+    "thumbnailUrl": "https://occ-0-6155-3663.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABb7PWcngdbq_vKg3h9lPAsmylvr-SCnEsZeUNv2EyD6mUIEogbOB2XwczxwzIeNsgPqlzea9J2OBZJxJ4nHyLA9pciS9NdTZKepwQni6taYFkHplvzmHzKNbEKBuwRJNHbnsT12Rpoc3eFj85AhtKJhK26kB9_yJ2EkrmNJrMfF-HvtNSLuMRUSW0HNDucquCxjmYNUBZ8nst5DKcsNgxj6dv65BSfniUKonsMpRvMxKERdyroRWWIEwnDzEtq6NhWAV6dx7Ev5vJ6E_hBLcqaJBHDGs6Sb2xBJlPl0QGW6XtzhGtj73KI4n.jpg",
+    "genre": "Adventure",
+    "duration": "25 minutes"
+  },
+  {
+    "title": "Rick and Morty",
+    "description": "Brilliant scientist Rick takes his fretful teenage grandson, Morty, on wild misadventures in other worlds and alternate dimensions.",
+    "videoUrl": "https://res.cloudinary.com/derb7py6u/video/upload/v1700485912/rick-and-morty.mp4",
+    "thumbnailUrl": "https://occ-0-6155-3663.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABRJRJFobhHrrGc-32tSD51Eh3jKYW5Xkn4ZuSIsdwiLawGFHBbWzVNR4QYory6SpLnkDeJjlSVtYn4xQW27O5yiT8nDe05vEbdyFSeubxSKajd1WUYrG9QxWj_mjtsQLHlNm5p-57Ch0VPR_eEOIdZSbC78_fwuLVzzkukH88qTz26foB_1p3KM7kZ24PFuMYGPb-LfQxqcDCtUADk8N0q_yste0rswoLcreBRJIWrqq-QmBmQxxs1XChz2ErQxixJe_t4ILpXGBqGk3jus87EKo9XbrLkk6UYpSSR-w42JSPiPoiyMjmnFtWWv6jKnBn242ZbVhASavnHeH8Lb7FPyikfy3QFJZS95N91AGK0I41GiiPCX-WegAgAKWI9kRmhPkzLV3RjmrCSXUaADkZVg7j7ivgDUR_w8qTHmyFQ.webp",
+    "genre": "Comedy",
+    "duration": "30 minutes"
+  },
+  {
+    "title": "Friends",
+    "description": "Rachel runs from her wedding and meets the friends in the coffee place. Ross is depressed about his divorce but he still has a crush on Rachel.",
+    "videoUrl": "https://res.cloudinary.com/derb7py6u/video/upload/v1700485893/friends.mp4",
+    "thumbnailUrl": "https://occ-0-6155-3663.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABWOg2-LIhqqBtvPlaXeb4fMQNvj9VQbFE1StxNDe4k3-gwLhuPsG9y_ImajP4MLHO7Ez4uiJNmIViuMCwOoswAahtfO7xr8wL0Q.jpg",
+    "genre": "Comedy",
+    "duration": "25 minutes"
+  },
+  {
+    "title": "Spider-Man; Across The Spider-Verse",
+    "description": "Teen Miles Morales teams up with Gwen Stacy on a new adventure, facing sinister foe The Spot and a vast legion of parallel heroes in the Multiverse.",
+    "videoUrl": "https://res.cloudinary.com/derb7py6u/video/upload/v1700485881/into-spiderverse.mp4",
+    "thumbnailUrl": "https://occ-0-6155-3663.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABTzOjisQy-P5Vy6R8eytdTx25W1PsmfoRc_TIJNs5h4pFSNhEBNw2-7-zP8UoNRSdsP0-g_O3NOtRq1swzsbfmnvYrbqRu1PPbw.jpg",
+    "genre": "Action",
+    "duration": "2 hours 20 minutes"
+  },
+  {
+    "title": "Brooklyn Nine-Nine",
+    "description": "Brilliant but immature Brooklyn detective Jake Peralta must learn to follow the rules and be a team player when his squad gets an exacting new captain.",
+    "videoUrl": "https://res.cloudinary.com/derb7py6u/video/upload/v1700485880/brooklyn-nine-nine.mp4",
+    "thumbnailUrl": "https://occ-0-6155-3663.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABUPoh0iYTG1q7Ra_9fWBdDd5MLqeK7aO-8S6Y0WpfumDbjljT-4zdlTlvKkvxN5buKUUg6vmg7iQOzaH9lZ_z203llV4B30sFEw.jpg",
+    "genre": "Comedy",
+    "duration": "25 minutes"
+  },
+  {
+    "title": "Nimona",
+    "description": "A knight framed for a tragic crime teams with a scrappy, shape-shifting teen to prove his innocence. But what if she's the monster he's sworn to destroy?",
+    "videoUrl": "https://res.cloudinary.com/derb7py6u/video/upload/v1700485878/nimona.mp4",
+    "thumbnailUrl": "https://occ-0-6155-3663.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABVLJ4xGtU7PyTC3NrndBTntfdd-NY45qa5PakiQdW7IK447TaI4pZJPElEkGs7rHFWlhWlgrw-bmpWecBgu3C1ezrhpljDQuDh9bAKGasMZpsLOPf4K0L8Iywhd5ll7Mns1_.jpg",
+    "genre": "Heartfelt",
+    "duration": "1 hour 42 minutes"
+  },
+  {
+    "title": "Ae Dil Hai Mushkil",
+    "description": "After crossing paths as students in London, Ayan and Alizeh navigate a journey of friendship, love and heartbreak that turns their worlds upside down.",
+    "videoUrl": "https://res.cloudinary.com/derb7py6u/video/upload/v1700485878/adhm.mp4",
+    "thumbnailUrl": "https://occ-0-6155-3663.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABakEqdZiojMwkMan3_Z6Qxx7UhQ_6-MbhZyNvbFSQy3pCHUtl0nmUB_jj4BUeqeQW3pEfkPXIFHe0igmPAGbtpPcskJsgxbvMWQ.webp",
+    "genre": "Bittersweet",
+    "duration": "2 hour 35 minutes"
+  }
+]
