@@ -3,17 +3,19 @@
 import React, { useState } from "react";
 import { AiOutlineInfoCircle } from "react-icons/ai";
 import { FiVolume2, FiVolumeX } from "react-icons/fi";
-import { BsFillPlayFill } from "react-icons/bs";
 
 import getBillboard from "@/hooks/getBillboard";
-import Link from "next/link";
 import PlayButton from "../MovieList/PlayButton";
+import useMovieStore from "@/stores/movieStore";
+import useModalStore from "@/stores/modalVisible";
 
 type Props = {};
 
 const Billboard = (props: Props) => {
   const { data, isLoading } = getBillboard();
   const [isMuted, setIsMuted] = useState<boolean>(true);
+  const setMovie = useMovieStore((state) => state.setMovie);
+  const setVisible = useModalStore((state) => state.setIsVisible);
   // const [isPlaying, setIsPlaying] = useState<boolean>(false);
   // Removed because netflix doesn't really do this
 
@@ -49,7 +51,14 @@ const Billboard = (props: Props) => {
         </p>
         <div className="flex flex-row items-center mt-4 gap-4">
           <PlayButton slug={data?.slug} />
-          <button className="bg-white text-white bg-opacity-30 rounded-md p-2 px-3 text-sm lg:text-lg font-semibold flex flex-row items-center hover:bg-opacity-20 transition">
+          <button
+            className="bg-white text-white bg-opacity-30 rounded-md p-2 px-3 text-sm lg:text-lg font-semibold flex flex-row items-center hover:bg-opacity-20 transition"
+            onClick={(e) => {
+              e.preventDefault();
+              setMovie(data);
+              setVisible(true);
+            }}
+          >
             <AiOutlineInfoCircle className="mr-2" size={20} />
             More Info
           </button>
