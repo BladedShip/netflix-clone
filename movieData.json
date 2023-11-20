@@ -5,7 +5,8 @@
     "videoUrl": "https://res.cloudinary.com/derb7py6u/video/upload/v1700486345/roll.mp4",
     "thumbnailUrl": "https://metro.co.uk/wp-content/uploads/2022/08/rick-astley-205a.jpg",
     "genre": "Comedy",
-    "duration": "73 hours"
+    "duration": "73 hours",
+    "isNew":"true"
   },
   {
     "title": "Scott Pilgrim Takes Off",
@@ -13,7 +14,8 @@
     "videoUrl": "https://res.cloudinary.com/derb7py6u/video/upload/v1700485918/scott-pilgrim.mp4",
     "thumbnailUrl": "https://occ-0-6155-3663.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABb7PWcngdbq_vKg3h9lPAsmylvr-SCnEsZeUNv2EyD6mUIEogbOB2XwczxwzIeNsgPqlzea9J2OBZJxJ4nHyLA9pciS9NdTZKepwQni6taYFkHplvzmHzKNbEKBuwRJNHbnsT12Rpoc3eFj85AhtKJhK26kB9_yJ2EkrmNJrMfF-HvtNSLuMRUSW0HNDucquCxjmYNUBZ8nst5DKcsNgxj6dv65BSfniUKonsMpRvMxKERdyroRWWIEwnDzEtq6NhWAV6dx7Ev5vJ6E_hBLcqaJBHDGs6Sb2xBJlPl0QGW6XtzhGtj73KI4n.jpg",
     "genre": "Adventure",
-    "duration": "25 minutes"
+    "duration": "25 minutes",
+    "isNew":"true"
   },
   {
     "title": "Rick and Morty",
@@ -21,7 +23,8 @@
     "videoUrl": "https://res.cloudinary.com/derb7py6u/video/upload/v1700485912/rick-and-morty.mp4",
     "thumbnailUrl": "https://occ-0-6155-3663.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABRJRJFobhHrrGc-32tSD51Eh3jKYW5Xkn4ZuSIsdwiLawGFHBbWzVNR4QYory6SpLnkDeJjlSVtYn4xQW27O5yiT8nDe05vEbdyFSeubxSKajd1WUYrG9QxWj_mjtsQLHlNm5p-57Ch0VPR_eEOIdZSbC78_fwuLVzzkukH88qTz26foB_1p3KM7kZ24PFuMYGPb-LfQxqcDCtUADk8N0q_yste0rswoLcreBRJIWrqq-QmBmQxxs1XChz2ErQxixJe_t4ILpXGBqGk3jus87EKo9XbrLkk6UYpSSR-w42JSPiPoiyMjmnFtWWv6jKnBn242ZbVhASavnHeH8Lb7FPyikfy3QFJZS95N91AGK0I41GiiPCX-WegAgAKWI9kRmhPkzLV3RjmrCSXUaADkZVg7j7ivgDUR_w8qTHmyFQ.webp",
     "genre": "Comedy",
-    "duration": "30 minutes"
+    "duration": "30 minutes",
+    "isNew":"true"
   },
   {
     "title": "Friends",
