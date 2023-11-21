@@ -38,8 +38,11 @@ const AccountSwitcher = (props: Props) => {
       {menuShown && (
         <div className="bg-black absolute w-60 p-6 top-16 right-2 flex-col border border-gray-500 flex">
           <div className="flex flex-col gap-4">
-            {profiles.map((profile) => (
-              <div className="group/item px-3 flex flex-row gap-4 items-center w-full">
+            {profiles.map((profile, _) => (
+              <div
+                key={_}
+                className="group/item px-3 flex flex-row gap-4 items-center w-full"
+              >
                 <Image src={profile.img} alt="Profile" width={40} height={40} />
                 <p className="text-white text-sm group-hover/item:underline">
                   {profile.name}

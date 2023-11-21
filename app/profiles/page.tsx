@@ -25,8 +25,8 @@ const Profiles = (props: Props) => {
           Who&apos;s Watching?
         </h1>
         <div className="flex items-center justify-center gap-8 mt-10">
-          {profiles.map((profile) => (
-            <Link href={`/`}>
+          {profiles.map((profile, _) => (
+            <Link href={`/`} key={_}>
               <div className="group flex-row w-44 mx-auto">
                 <div className="w-44 h-44 rounded-md flex items-center justify-center border-2 border-transparent group-hover:cursor-pointer grouo-hover:border-white overflow-hidden">
                   <Image
