@@ -38,7 +38,10 @@ export async function generateStaticParams() {
   }));
 }
 
+// Ensures that only values in the array are valid routes, else returns a 404
 export const dynamicParams = false;
+
+// Statically Generates all the paths specified by generateStaticParams with a revalidation time of 3600 seconds (1 hour) (ISR)
 export const revalidate = 3600;
 
 // Pages that are Statically Generated (SSG)

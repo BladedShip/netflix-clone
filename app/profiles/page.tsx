@@ -1,6 +1,21 @@
 import Image from "next/image";
 import Link from "next/link";
 
+const profiles = [
+  {
+    name: "default-blue",
+    img: "/assets/profile-img/default-blue.png",
+  },
+  {
+    name: "default-green",
+    img: "/assets/profile-img/default-green.png",
+  },
+  {
+    name: "default-red",
+    img: "/assets/profile-img/default-red.png",
+  },
+];
+
 type Props = {};
 const Profiles = (props: Props) => {
   return (
@@ -10,51 +25,23 @@ const Profiles = (props: Props) => {
           Who&apos;s Watching?
         </h1>
         <div className="flex items-center justify-center gap-8 mt-10">
-          <Link href={`/`}>
-            <div className="group flex-row w-44 mx-auto">
-              <div className="w-44 h-44 rounded-md flex items-center justify-center border-2 border-transparent group-hover:cursor-pointer grouo-hover:border-white overflow-hidden">
-                <Image
-                  src="/assets/profile-img/default-blue.png"
-                  alt="Profile Image"
-                  width={200}
-                  height={200}
-                />
+          {profiles.map((profile) => (
+            <Link href={`/`}>
+              <div className="group flex-row w-44 mx-auto">
+                <div className="w-44 h-44 rounded-md flex items-center justify-center border-2 border-transparent group-hover:cursor-pointer grouo-hover:border-white overflow-hidden">
+                  <Image
+                    src={profile.img}
+                    alt="Profile Image"
+                    width={200}
+                    height={200}
+                  />
+                </div>
+                <p className="mt-4 text-gray-400 text-2xl text-center group-hover:text-white">
+                  {profile.name}
+                </p>
               </div>
-              <p className="mt-4 text-gray-400 text-2xl text-center group-hover:text-white">
-                Default User
-              </p>
-            </div>
-          </Link>
-          <Link href={`/`}>
-            <div className="group flex-row w-44 mx-auto">
-              <div className="w-44 h-44 rounded-md flex items-center justify-center border-2 border-transparent group-hover:cursor-pointer grouo-hover:border-white overflow-hidden">
-                <Image
-                  src="/assets/profile-img/default-green.png"
-                  alt="Profile Image"
-                  width={200}
-                  height={200}
-                />
-              </div>
-              <p className="mt-4 text-gray-400 text-2xl text-center group-hover:text-white">
-                Default User
-              </p>
-            </div>
-          </Link>
-          <Link href={`/`}>
-            <div className="group flex-row w-44 mx-auto">
-              <div className="w-44 h-44 rounded-md flex items-center justify-center border-2 border-transparent group-hover:cursor-pointer grouo-hover:border-white overflow-hidden">
-                <Image
-                  src="/assets/profile-img/default-red.png"
-                  alt="Profile Image"
-                  width={200}
-                  height={200}
-                />
-              </div>
-              <p className="mt-4 text-gray-400 text-2xl text-center group-hover:text-white">
-                Default User
-              </p>
-            </div>
-          </Link>
+            </Link>
+          ))}
         </div>
       </div>
     </main>

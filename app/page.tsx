@@ -1,4 +1,5 @@
 import Billboard from "@/components/Billboard";
+import Footer from "@/components/Footer";
 import InfoModal from "@/components/InfoModal";
 import MovieList from "@/components/MovieList";
 import ClientWrapper from "@/components/MovieList/ClientWrapper";
@@ -22,6 +23,7 @@ const Home = (props: Props) => {
           title="Favorites"
         />
       </section>
+      <Footer/>
     </main>
   );
 };
