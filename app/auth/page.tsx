@@ -37,7 +37,7 @@ const AuthScreen = (props: Props) => {
   };
 
   // used useCallback just to ensure that the function is not redefined on every render.
-  const login = async () => {
+  const login = useCallback(async () => {
     try {
       await signIn("credentials", {
         email,
@@ -50,9 +50,9 @@ const AuthScreen = (props: Props) => {
     } catch (err) {
       console.log(err);
     }
-  };
+  }, [email, password, router]);
 
-  const registerUser = async () => {
+  const registerUser = useCallback(async () => {
     try {
       await axios.post("/api/register", {
         email,
@@ -63,7 +63,7 @@ const AuthScreen = (props: Props) => {
     } catch (err) {
       console.log(err);
     }
-  };
+  }, [email, username, password, login]);
 
   return (
     <main className="relative h-full w-full bg-[url('/assets/banner.jpeg')] bg-no-repeat bg-center bg-fixed bg-cover">
