@@ -24,6 +24,8 @@ const AuthScreen = (props: Props) => {
   const [username, setUsername] = useState<string>("");
   const [password, setPassword] = useState<string>("");
 
+  const [userExists, setUserExists] = useState<boolean>(false);
+
   const [authState, setAuthState] = useState<AuthDisplayState>(
     AuthDisplayState.LOGIN
   );
@@ -45,8 +47,8 @@ const AuthScreen = (props: Props) => {
         redirect: false,
         callbackUrl: "/",
       });
-
       router.push("/profiles");
+      router.refresh();
     } catch (err) {
       console.log(err);
     }
@@ -60,8 +62,8 @@ const AuthScreen = (props: Props) => {
         password,
       });
       login();
-    } catch (err) {
-      console.log(err);
+    } catch (err: any) {
+      if (err?.request?.status === 422) setUserExists(true);
     }
   }, [email, username, password, login]);
 
@@ -112,6 +114,20 @@ const AuthScreen = (props: Props) => {
                   setPassword(e.target.value);
                 }}
               />
+              {userExists && (
+                <p className="text-neutral-500">
+                  Account Already Exists, Try{" "}
+                  <span
+                    className="text-white hover:underline cursor-pointer "
+                    onClick={() => {
+                      toggleAuthState();
+                      setUserExists(false);
+                    }}
+                  >
+                    Singing in
+                  </span>
+                </p>
+              )}
             </div>
             <button
               className="bg-red-600 py-3 text-white rounded-md w-full mt-10 hover:bg-red-700 transition cursor-pointer"

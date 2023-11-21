@@ -26,7 +26,7 @@ export default async function handler(
       }
       const user = await prismaDB.user.update({
         where: {
-          email: currentUser.email || "",
+          email: currentUser?.email || "",
         },
         data: {
           favorites: {
@@ -51,13 +51,13 @@ export default async function handler(
         throw new Error("Invalid Movie");
       }
 
-      const currentFavorites = currentUser.favorites.filter(
+      const currentFavorites = currentUser?.favorites.filter(
         (item: string) => item !== movieSlug
       );
 
       const userUpdate = await prismaDB.user.update({
         where: {
-          email: currentUser.email || "",
+          email: currentUser?.email || "",
         },
         data: {
           favorites: currentFavorites,

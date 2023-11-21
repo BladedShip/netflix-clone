@@ -3,6 +3,7 @@
 import useCurrentUser from "@/hooks/useCurrentUser";
 import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
+import { useEffect } from "react";
 
 type Props = {
   children: React.ReactNode;
@@ -11,8 +12,11 @@ type Props = {
 export default function SessionProvider({ children }: Props) {
   const router = useRouter();
   const path = usePathname();
-  const { data, isLoading } = useCurrentUser();
+  const { data } = useCurrentUser();
+  useEffect(() => {
+    if (data) return;
+    router.push("/auth");
+  }, [data]);
   if (path === "/auth") return <>{children}</>;
-  if (!data && !isLoading) router.push("/auth");
   return <>{children}</>;
 }

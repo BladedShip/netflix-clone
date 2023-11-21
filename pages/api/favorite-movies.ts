@@ -17,7 +17,7 @@ export default async function handler(
     const { currentUser } = await serverAuth(req, res);
 
     const favoriteMovies = movieData.filter((item: MovieData) =>
-      currentUser.favorites.includes(item.slug)
+      currentUser?.favorites.includes(item.slug)
     );
 
     return res.status(200).json(favoriteMovies);
