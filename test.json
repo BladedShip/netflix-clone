@@ -1,0 +1,82 @@
+{
+  "image_url":"https://cdn.vertex42.com/ExcelTemplates/Images/invoices/billing-invoice-template.png",
+  "input_fields":[{
+    "name":"name",
+    "type":"text",
+    "id":"name",
+    "label":"Username"
+  },{
+    "name":"company",
+    "type":"text",
+    "id":"company",
+    "label":"Company"
+  }]
+}
+
+{
+  "respone":[
+    {
+      "name":"name",
+      "type":"text",
+      "id":"name",
+      "label":"Company Name",
+      "value":"[Company Name]"
+    },{
+      "name":"address",
+      "type":"text",
+      "id":"address",
+      "label":"Address",
+      "value":"[Street Address]"
+    }
+  ]
+}
+
+{
+  "response": {
+    "Company Name": "[Company Name]",
+    "Street Address": "[Street Address]",
+    "City, ST ZIP": "[City, ST ZIP]",
+    "Phone": "(000) 000-0000",
+    "Invoice Number": "2034",
+    "Date": "5/1/2014",
+    "Customer ID": "584",
+    "Terms": "Net 30 Days",
+    "Bill To": {
+      "Name": "[Name]",
+      "Company Name": "[Company Name]",
+      "Street Address": "[Street Address]",
+      "City, ST ZIP": "[City, ST ZIP]",
+      "Phone": "[Phone]",
+      "Email Address": "[Email Address]"
+    },
+    "Ship To": {
+      "Name": "[Name]",
+      "Company Name": "[Company Name]",
+      "Street Address": "[Street Address]",
+      "City, ST ZIP": "[City, ST ZIP]",
+      "Phone": "[Phone]"
+    },
+    "Items": [
+      {
+        "Description": "Service Fee",
+        "Quantity": "1",
+        "Unit Price": "200.00",
+        "Amount": "200.00"
+      },
+      {
+        "Description": "Labor: 5 hours at $75/hr",
+        "Quantity": "5",
+        "Unit Price": "75.00",
+        "Amount": "375.00"
+      },
+      {
+        "Description": "New client discount",
+        "Quantity": "",
+        "Unit Price": "",
+        "Amount": "(50.00)"
+      }
+    ],
+    "Total": "525.00",
+    "Notes": "Thank you for your business! If you have any questions about this invoice, please contact [Name, Phone, email@address.com]"
+  }
+}
