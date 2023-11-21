@@ -1,11 +1,11 @@
 import { NextApiRequest, NextApiResponse } from "next";
 
-import prismaDB from "@/lib/prismaDB";
 import serverAuth from "@/lib/serverAuth";
 
 import movieData from "@/movieData.json";
 import { MovieData } from "@/typings";
 
+// API route to get the current user's favorite movies.
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse

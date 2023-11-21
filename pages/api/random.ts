@@ -2,6 +2,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 
 import movieData from "@/movieData.json";
 
+// API route to get a random movie.
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse

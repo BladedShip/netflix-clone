@@ -4,6 +4,9 @@ import { compare } from "bcrypt";
 
 import prismaDB from "@/lib/prismaDB";
 
+// API route to handle authentication
+// https://next-auth.js.org/configuration/options
+
 export const authOptions: AuthOptions = {
   providers: [
     Credentials({

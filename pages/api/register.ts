@@ -2,6 +2,7 @@ import bcrypt from "bcrypt";
 import { NextApiRequest, NextApiResponse } from "next";
 import prismaDB from "@/lib/prismaDB";
 
+// API route to handle registering a new user.
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
