@@ -7,7 +7,7 @@ const Profiles = (props: Props) => {
     <main className="flex items-center h-full justify-center">
       <div className="flex flex-col" id="profile-selector">
         <h1 className="text-3xl mb:text-6xl text-white text-center">
-          Who's Watching?
+          Who&apos;s Watching?
         </h1>
         <div className="flex items-center justify-center gap-8 mt-10">
           <Link href={`/`}>

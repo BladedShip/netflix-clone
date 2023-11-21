@@ -63,7 +63,7 @@ const AuthScreen = (props: Props) => {
     } catch (err) {
       console.log(err);
     }
-  }, [email, username, password]);
+  }, [email, username, password, login]);
 
   return (
     <main className="relative h-full w-full bg-[url('/assets/banner.jpeg')] bg-no-repeat bg-center bg-fixed bg-cover">
