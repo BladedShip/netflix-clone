@@ -7,7 +7,10 @@ import AccountSwitcher from "./AccountSwitcher";
 import SearchBox from "./SearchBox";
 import Link from "next/link";
 
-type Props = {};
+type Props = {
+  search?: string;
+  setSearch?: (search: string) => void;
+};
 
 const Navbar = (props: Props) => {
   return (
@@ -31,7 +34,7 @@ const Navbar = (props: Props) => {
         </div>
         <DropdownSmall />
         <div className="flex flex-row ml-auto gap-6 items-center">
-          <SearchBox />
+          <SearchBox/>
           <div className="text-gray-300 hover:text-gray-500 cursor-pointer transition">
             <BsBell size={20} />
           </div>

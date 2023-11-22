@@ -16,7 +16,7 @@ export default function SessionProvider({ children }: Props) {
 
   useEffect(() => {
     if (data) {
-      router.push("/");
+      router.push(path || "/");
     } else if (path !== "/auth" && !data) {
       router.push("/auth");
     }

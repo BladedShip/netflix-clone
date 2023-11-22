@@ -1,7 +1,8 @@
 "use client";
 
+import useSearchStore from "@/stores/searchStore";
 import { usePathname, useRouter } from "next/navigation";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { BsSearch } from "react-icons/bs";
 
 type Props = {};
@@ -9,7 +10,11 @@ type Props = {};
 const SearchBox = (props: Props) => {
   const path = usePathname();
   const router = useRouter();
-  const [search, setSearch] = useState("");
+
+  const [search, setSearch] = useSearchStore((state) => [
+    state.search,
+    state.setSearch,
+  ]);
 
   // Did not implement a debounce here because We're searching through a small amount of data.
   // If it was a larger amount, pagination along with delays would be a better solution
@@ -26,11 +31,10 @@ const SearchBox = (props: Props) => {
     <button
       className="text-gray-300 hover:text-gray-500 cursor-pointer transition"
       onClick={(e) => {
+        e.preventDefault();
         if (!path?.includes("/search")) {
           router.push(`/search`);
         }
-        e.preventDefault();
-        router.push(`/search`);
       }}
     >
       {path?.includes("/search") ? (
