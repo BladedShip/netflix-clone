@@ -11,6 +11,9 @@ const SearchBox = (props: Props) => {
   const router = useRouter();
   const [search, setSearch] = useState("");
 
+  // Did not implement a debounce here because We're searching through a small amount of data.
+  // If it was a larger amount, pagination along with delays would be a better solution
+
   useEffect(() => {
     if (search) {
       router.push(`/search?query=${search}`);
