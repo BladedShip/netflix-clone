@@ -106,7 +106,13 @@ The folder structure is as follows:
 
 - The above issue also causes errors to be logged in the server console when the auth flow is initiated. All this should be fixed once Next-Auth fully supports app directory.
 
-- 
+## Rendering Techniques
+
+- SSR - All components are rendered once on the server side and then sent to the client. This is the default behavior of Next.js’ App Router.
+
+- CSR - Componenets and pages that are flagged with "use client" are first rendered on the server and then sent to the client. Once the client receives the page, it is re-rendered on the client side.
+
+- ISR - All movie pages have SSG enabled. This means that the page is rendered once on the server and then sent to the client. The page is then re-rendered on the server after a certain amount of time, updating the content of the page.
 
 ## Learn More
 
