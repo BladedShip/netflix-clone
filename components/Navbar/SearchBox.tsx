@@ -4,9 +4,7 @@ import { usePathname, useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { BsSearch } from "react-icons/bs";
 
-type Props = {
-  searchParams?: any;
-};
+type Props = {};
 
 const SearchBox = (props: Props) => {
   const path = usePathname();
