@@ -13,10 +13,14 @@ export default function SessionProvider({ children }: Props) {
   const router = useRouter();
   const path = usePathname();
   const { data } = useCurrentUser();
+
   useEffect(() => {
-    if (data) return;
-    router.push("/auth");
+    if (data) {
+      router.push("/");
+    } else if (path !== "/auth" && !data) {
+      router.push("/auth");
+    }
   }, [data]);
-  if (path === "/auth") return <>{children}</>;
+
   return <>{children}</>;
 }
