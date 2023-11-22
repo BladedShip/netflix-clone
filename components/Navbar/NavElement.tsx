@@ -1,14 +1,16 @@
+import Link from "next/link";
 import React from "react";
 
 type Props = {
   label: string;
+  href: string;
 };
 
 const NavElement = (props: Props) => {
   return (
-    <div className="text-white cursor-pointer hover:text-gray-300 transition text-sm font-light tracking-wider">
+    <Link href={props.href} className="text-white cursor-pointer hover:text-gray-300 transition text-sm font-light tracking-wider">
       {props.label}
-    </div>
+    </Link>
   );
 };
 
