@@ -25,12 +25,12 @@ const DropdownSmall = (props: Props) => {
       {menuShown && (
         <div className="bg-black absolute w-60 p-6 top-16 left-2 flex-col border border-gray-500 flex">
           <div className="flex flex-col gap-4">
-            <NavElement label="Home" />
-            <NavElement label="TV Shows" />
-            <NavElement label="Movies" />
-            <NavElement label="New & Popular" />
-            <NavElement label="My List" />
-            <NavElement label="Browse By Languages" />
+            <NavElement label="Home" href={"/"} />
+            <NavElement label="TV Shows" href={"/"} />
+            <NavElement label="Movies" href={"/"} />
+            <NavElement label="New & Popular" href={"/"} />
+            <NavElement label="My List" href={"/"} />
+            <NavElement label="Browse By Languages" href={"/"} />
           </div>
         </div>
       )}

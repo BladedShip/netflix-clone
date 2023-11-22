@@ -20,7 +20,7 @@ export default function SessionProvider({ children }: Props) {
     } else if (path !== "/auth" && !data) {
       router.push("/auth");
     }
-  }, [data]);
+  }, [data, path, router]);
 
   return <>{children}</>;
 }
