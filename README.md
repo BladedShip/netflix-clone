@@ -106,6 +106,8 @@ The folder structure is as follows:
 
 - The above issue also causes errors to be logged in the server console when the auth flow is initiated. All this should be fixed once Next-Auth fully supports app directory.
 
+Note: Switch from using a custom auth flow in Next-Auth to something like Clerk so that we can fully port over the auth flow to the app directory. (Use useSignUp and useSignIn hooks from Clerk)
+
 ## Rendering Techniques
 
 - SSR - All components are rendered once on the server side and then sent to the client. This is the default behavior of Next.js’ App Router.
