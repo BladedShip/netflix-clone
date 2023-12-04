@@ -3,11 +3,13 @@
 import React, { useState } from "react";
 import { BsChevronDown } from "react-icons/bs";
 import Image from "next/image";
-import { signOut } from "next-auth/react";
+import { useRouter } from "next/navigation";
+// import { signOut } from "next-auth/react";
 
 type Props = {};
 
 const AccountSwitcher = (props: Props) => {
+  const router = useRouter();
   const profiles = [
     {
       name: "default-blue",
@@ -55,7 +57,8 @@ const AccountSwitcher = (props: Props) => {
               className="px-4 text-center text-white text-sm hover:underline"
               onClick={(e) => {
                 e.preventDefault();
-                signOut();
+                // signOut();
+                router.push("/auth");
               }}
             >
               Sign Out
