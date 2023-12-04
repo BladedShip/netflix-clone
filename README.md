@@ -1,12 +1,11 @@
 This is a clone of Netflix (Closest I could make it) built using [Next.js](https://nextjs.org/) and [TailwindCSS](https://tailwindcss.com/)
 
-## App Paths 
+## App Paths
 
 - Home Page: /
 - Movie Page: /movie/[slug]
 - Auth Page: /auth
 - Profile Selector: /profiles
-
 
 ## Getting Started
 
@@ -62,7 +61,7 @@ The folder structure is as follows:
 │   │   └── AuthPage
 │   ├──movie
 │   │   └── [slug]
-│   │       └── MoviePage 
+│   │       └── MoviePage
 │   ├── profiles
 │   │   └── ProfileSelector
 │   └── HomePage (page.tsx, layout.tsx)
@@ -97,7 +96,7 @@ The folder structure is as follows:
 │   └── movieStore // store for the billboard content
 ├── next.config.js
 ├── package.json
-├── README.md 
+├── README.md
 ├── tailwind.config.js
 └── tsconfig.json
 ```
