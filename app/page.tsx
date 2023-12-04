@@ -11,19 +11,16 @@ type Props = {};
 const Home = (props: Props) => {
   return (
     <main>
-      <InfoModal
-      />
+      <InfoModal />
       <Navbar />
       <Billboard />
       <section id="recommended-movie-list">
-        <MovieList movieData={movieList} listTitle="Recommended"/>
+        <MovieList movieData={movieList} listTitle="Recommended" />
       </section>
       <section id="favorite-movie-list">
-        <ClientWrapper
-          title="Favorites"
-        />
+        <ClientWrapper title="Favorites" />
       </section>
-      <Footer/>
+      <Footer />
     </main>
   );
 };

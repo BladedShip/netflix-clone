@@ -39,33 +39,42 @@ const AuthScreen = (props: Props) => {
   };
 
   // used useCallback just to ensure that the function is not redefined on every render.
-  const login = useCallback(async () => {
-    try {
-      await signIn("credentials", {
-        email,
-        password,
-        redirect: false,
-        callbackUrl: "/",
-      });
-      router.push("/profiles");
-      router.refresh();
-    } catch (err) {
-      console.log(err);
-    }
-  }, [email, password, router]);
+  // const login = useCallback(async () => {
+  //   try {
+  //     await signIn("credentials", {
+  //       email,
+  //       password,
+  //       redirect: false,
+  //       callbackUrl: "/",
+  //     });
+  //     router.push("/profiles");
+  //     router.refresh();
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // }, [email, password, router]);
 
-  const registerUser = useCallback(async () => {
-    try {
-      await axios.post("/api/register", {
-        email,
-        username,
-        password,
-      });
-      login();
-    } catch (err: any) {
-      if (err?.request?.status === 422) setUserExists(true);
-    }
-  }, [email, username, password, login]);
+  // const registerUser = useCallback(async () => {
+  //   try {
+  //     await axios.post("/api/register", {
+  //       email,
+  //       username,
+  //       password,
+  //     });
+  //     login();
+  //   } catch (err: any) {
+  //     if (err?.request?.status === 422) setUserExists(true);
+  //   }
+  // }, [email, username, password, login]);
+
+  const login = () => {
+    router.push("/profiles");
+    router.refresh();
+  };
+
+  const registerUser = () => {
+    login();
+  };
 
   return (
     <main className="relative h-full w-full bg-[url('/assets/banner.jpeg')] bg-no-repeat bg-center bg-fixed bg-cover">

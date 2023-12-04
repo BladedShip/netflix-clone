@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import SessionProvider from "@/components/SessionProvider";
+import { CookiesProvider } from "react-cookie";
+// import SessionProvider from "@/components/SessionProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,7 +20,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <SessionProvider>{children}</SessionProvider>
+        {/* <SessionProvider>{children}</SessionProvider> */}
+          {children}
       </body>
     </html>
   );
