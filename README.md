@@ -1,5 +1,13 @@
 This is a clone of Netflix (Closest I could make it) built using [Next.js](https://nextjs.org/) and [TailwindCSS](https://tailwindcss.com/)
 
+## App Paths 
+
+- Home Page: /
+- Movie Page: /movie/[slug]
+- Auth Page: /auth
+- Profile Selector: /profiles
+
+
 ## Getting Started
 
 - Clone this repo
